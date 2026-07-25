@@ -1,4 +1,3 @@
-import { EducationEntry } from "@/components/education-entry";
 import { educationData } from "@/data/education";
 import { PublicationEntry } from "@/components/publication-entry";
 import { publicationData } from "@/data/publication";
@@ -15,6 +14,31 @@ import { sectionOrder, Section } from "@/data/section-order";
 export default function Home() {
   const sectionHeadingClass =
     "font-sans text-xs font-semibold tracking-[0.18em] uppercase text-zinc-500 mb-8";
+  const educationGroups = educationData.reduce<
+    {
+      institution: string;
+      institutionLogoUrl?: string;
+      entries: typeof educationData;
+    }[]
+  >((groups, education) => {
+    const group = groups.find(
+      (item) =>
+        item.institution === education.institution &&
+        item.institutionLogoUrl === education.institutionLogoUrl,
+    );
+
+    if (group) {
+      group.entries.push(education);
+    } else {
+      groups.push({
+        institution: education.institution,
+        institutionLogoUrl: education.institutionLogoUrl,
+        entries: [education],
+      });
+    }
+
+    return groups;
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#f7f7f4] text-zinc-900">
@@ -59,12 +83,66 @@ export default function Home() {
                       educationData.length > 0 && (
                         <section key={sectionName}>
                           <h2 className={sectionHeadingClass}>Education</h2>
-                          <div className="space-y-10">
-                            {educationData.map((education, index) => (
-                              <EducationEntry
-                                key={index}
-                                education={education}
-                              />
+                          <div className="space-y-8">
+                            {educationGroups.map((group) => (
+                              <div
+                                key={`${group.institution}-${group.institutionLogoUrl || ""}`}
+                                className="border-l border-zinc-200 pl-5"
+                              >
+                                <div className="flex items-center gap-3">
+                                  {group.institutionLogoUrl && (
+                                    <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden opacity-85">
+                                      <img
+                                        src={group.institutionLogoUrl}
+                                        alt={`${group.institution} logo`}
+                                        className="max-h-full max-w-full object-contain mix-blend-multiply"
+                                      />
+                                    </div>
+                                  )}
+                                  <h3 className="font-serif text-xl leading-snug text-zinc-950">
+                                    {group.institution}
+                                  </h3>
+                                </div>
+                                <div className="mt-5 space-y-4">
+                                  {group.entries.map((education) => (
+                                    <div
+                                      key={`${education.year}-${education.degree}`}
+                                      className="grid grid-cols-1 gap-1 sm:grid-cols-[1fr_auto] sm:items-baseline sm:gap-6"
+                                    >
+                                      <div>
+                                        <p className="text-sm text-zinc-700">
+                                          {education.degree}
+                                        </p>
+                                        {education.advisor && (
+                                          <p className="mt-2 text-sm italic text-zinc-500">
+                                            Advisor: {education.advisor}
+                                          </p>
+                                        )}
+                                        {education.thesis && (
+                                          <p className="mt-2 text-sm italic text-zinc-500">
+                                            Thesis:{" "}
+                                            {education.thesisUrl ? (
+                                              <a
+                                                href={education.thesisUrl}
+                                                className="underline decoration-zinc-300 underline-offset-4 transition-colors hover:text-zinc-950 hover:decoration-zinc-800"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                              >
+                                                {education.thesis}
+                                              </a>
+                                            ) : (
+                                              education.thesis
+                                            )}
+                                          </p>
+                                        )}
+                                      </div>
+                                      <p className="font-sans text-[11px] font-medium uppercase tracking-[0.14em] text-zinc-500 sm:text-right">
+                                        {education.year}
+                                      </p>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
                             ))}
                           </div>
                         </section>
