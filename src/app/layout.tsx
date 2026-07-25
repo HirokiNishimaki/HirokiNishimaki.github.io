@@ -43,25 +43,25 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${notoSerif.variable} ${ptSerif.variable} antialiased`}
       >
-        <main className="">{children}</main>
-        <footer className="border-t border-neutral-200 dark:border-neutral-800 bg-[#FFFCF8]">
-          <div className="flex flex-row mx-auto max-w-7xl px-6 py-12 md:flex md:items-start md:justify-between ">
-            <div className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
+        <main>{children}</main>
+        <footer className="border-t border-zinc-200 bg-[#f7f7f4]">
+          <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-10 text-sm text-zinc-500 sm:px-8 md:flex-row md:items-start md:justify-between">
+            <div>
               <p>
                 © {new Date().getFullYear()} {aboutMe.name}.
               </p>
               {aboutMe.secretDescription && (
-                <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-4">
+                <p className="mt-3 text-xs text-zinc-500">
                   {aboutMe.secretDescription}
                 </p>
               )}
             </div>
-            <div className="mb-4">
-              <p className="text-sm text-neutral-500 dark:text-neutral-500 justify">
+            <div>
+              <p>
                 Built with{" "}
                 <a
                   href="https://github.com/tovacinni/research-website-template"
-                  className="underline hover:text-neutral-800 dark:hover:text-neutral-300 transition-colors"
+                  className="underline decoration-zinc-300 underline-offset-4 transition-colors hover:text-zinc-900 hover:decoration-zinc-800"
                 >
                   research-website-template
                 </a>

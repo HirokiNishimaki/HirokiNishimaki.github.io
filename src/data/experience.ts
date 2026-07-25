@@ -6,25 +6,28 @@ export interface Experience {
   advisor?: string;
   manager?: string;
   companyUrl?: string;
+  companyLogoUrl?: string;
 }
 
 export const experienceData: Experience[] = [
   {
-    date: "Summer 2023",
-    title: "Research Intern",
-    company: "DeepMind",
-    description:
-      "Developed novel algorithms for causal structure learning in reinforcement learning settings",
-    advisor: "Peter Wang",
-    companyUrl: "https://deepmind.com",
+    date: "Oct 2025 - Present",
+    title: "Machine Learning Engineering Intern",
+    company: "CaseMatch",
+    // description:
+    //   "Worked on improving robustness of large language models to distribution shifts",
+    // manager: "Elise Brown",
+    companyUrl: "https://biz.casematch.jp/",
+    companyLogoUrl: "https://storage.googleapis.com/studio-design-asset-files/projects/BmqM17grqX/s-1188x390_v-fs_webp_27e19efb-6db5-475a-9490-97c97d1c7dda_small.webp",
   },
   {
-    date: "Summer 2022",
-    title: "Research Intern",
-    company: "Google Research",
-    description:
-      "Worked on improving robustness of large language models to distribution shifts",
-    manager: "Elise Brown",
-    companyUrl: "https://google.com",
+    date: "Oct 2023 - Mar 2026",
+    title: "Software Engineering Intern",
+    company: "INNOOV",
+    // description:
+    //   "Developed novel algorithms for causal structure learning in reinforcement learning settings",
+    // advisor: "Peter Wang",
+    companyUrl: "https://www.innoov.io/",
+    companyLogoUrl: "https://www.innoov.io/hs-fs/hubfs/INNOOV%20bot.png?width=1644&height=608&name=INNOOV%20bot.png",
   },
 ];

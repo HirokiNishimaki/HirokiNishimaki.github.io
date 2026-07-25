@@ -22,10 +22,9 @@ export const aboutMe: AboutMe = {
   altName: "西牧 宙輝",
   title: "Master's student (M1)",
   institution: "Keio University",
-  description: "",
   // Note that links work in the description
-  // description:
-  //   "I'm a final-year <a href='https://www.stanford.edu'>PhD candidate</a> working at the intersection of causal inference and machine learning. My research focuses on developing robust, interpretable systems that can reason about cause and effect in complex environments.",
+  description:
+    "I am a master's student at <a href='https://www.keio.ac.jp' target='_blank' rel='noopener noreferrer'>Keio University</a>, advised by Prof. Komei Sugiura at the <a href='https://www.smilab.org/' target='_blank' rel='noopenernoreferrer'>SMI Lab</a>. My research focuses on multimodal AI for robotics, including language-guided localization, retrieval, and trajectory generation in real-world environments.",
   email: "n.hiroki1108@keio.jp",
   imageUrl: "/profile.jpg",
   // googleScholarUrl: "https://scholar.google.com/citations?user=bWtMl_MAAAAJ",

@@ -19,30 +19,30 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
   }
 
   return (
-    <div className="md:sticky top-12 flex flex-row-reverse md:flex-col gap-4 md:space-y-8">
+    <div className="flex flex-row-reverse gap-5 md:flex-col md:gap-7">
       {aboutMe.imageUrl && (
-        <div className="w-1/3 md:w-full flex-shrink-0">
-          <div className="relative max-h-[45vh] md:w-[65%] aspect-[3/4]">
+        <div className="w-32 flex-shrink-0 sm:w-40 md:w-full">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-zinc-200 shadow-sm ring-1 ring-zinc-200 md:w-[76%] lg:w-[70%]">
             <Image
               src={aboutMe.imageUrl}
               alt={aboutMe.name}
               fill
               priority
-              className="object-cover object-top rounded-xl"
+              className="object-cover object-top"
             />
           </div>
         </div>
       )}
-      <div className="w-2/3 md:w-full">
-        <h1 className="font-serif text-3xl font-light tracking-wide mb-3">
+      <div className="min-w-0 flex-1 md:w-full">
+        <h1 className="mb-2 font-serif text-3xl font-light leading-tight text-zinc-950 sm:text-4xl md:text-3xl lg:text-4xl">
           {aboutMe.name}
         </h1>
         {aboutMe.altName && (
-          <p className="text-zinc-600 text-md leading-relaxed tracking-wide mb-6">
+          <p className="mb-5 text-sm leading-relaxed text-zinc-500">
             {aboutMe.altName}
           </p>
         )}
-        <p className="text-zinc-600 text-xs leading-relaxed tracking-wide uppercase mb-6">
+        <p className="mb-6 border-l border-zinc-300 pl-4 font-sans text-xs font-medium uppercase leading-6 tracking-[0.16em] text-zinc-500">
           {aboutMe.title}
           <br />
           {aboutMe.institutionUrl ? (
@@ -58,7 +58,7 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
             aboutMe.institution
           )}
         </p>
-        <div className="flex gap-6 mb-6">
+        <div className="mb-6 flex flex-wrap gap-x-5 gap-y-2">
           {aboutMe.blogUrl && (
             <a
               href={aboutMe.blogUrl}
@@ -88,26 +88,26 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
             </a>
           )}
         </div>
-        <div className="space-y-2">
+        <div className="space-y-2.5 text-sm">
           <a
             href={`mailto:${aboutMe.email}`}
-            className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+            className="inline-flex max-w-full items-center gap-2 text-zinc-600 transition-colors hover:text-zinc-950"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Mail size={14} />
-            {aboutMe.email}
+            <Mail size={15} className="shrink-0" />
+            <span className="truncate">{aboutMe.email}</span>
           </a>
           {aboutMe.googleScholarUrl && (
             <>
               <br />
               <a
                 href={aboutMe.googleScholarUrl}
-                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+                className="inline-flex items-center gap-2 text-zinc-600 transition-colors hover:text-zinc-950"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <GraduationCap size={14} />
+                <GraduationCap size={15} />
                 Google Scholar
               </a>
             </>
@@ -117,11 +117,11 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
               <br />
               <a
                 href={`https://twitter.com/${aboutMe.twitterUsername}`}
-                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+                className="inline-flex items-center gap-2 text-zinc-600 transition-colors hover:text-zinc-950"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Twitter size={14} />@{aboutMe.twitterUsername}
+                <Twitter size={15} />@{aboutMe.twitterUsername}
               </a>
             </>
           )}
@@ -130,11 +130,11 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
               <br />
               <a
                 href={`https://github.com/${aboutMe.githubUsername}`}
-                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+                className="inline-flex items-center gap-2 text-zinc-600 transition-colors hover:text-zinc-950"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Github size={14} />
+                <Github size={15} />
                 github.com/{aboutMe.githubUsername}
               </a>
             </>
@@ -144,11 +144,11 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
               <br />
               <a
                 href={`https://www.linkedin.com/in/${aboutMe.linkedinUsername}`}
-                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+                className="inline-flex items-center gap-2 text-zinc-600 transition-colors hover:text-zinc-950"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Linkedin size={14} />
+                <Linkedin size={15} />
                 linkedin.com/in/{aboutMe.linkedinUsername}
               </a>
             </>
