@@ -10,6 +10,7 @@ export interface Publication {
   bibtex?: string;
   tldr?: string;
   imageUrl?: string;
+  presentationId?: string;
   award?: string;
 }
 
@@ -37,6 +38,7 @@ export const publicationData: Publication[] = [
     authors: "Hiroki Nishimaki, Kei Katsumata, Jun Piao, Naoki Hosomi, Kentaro Yamada, and Komei Sugiura",
     tldr: "Street-view image retrieval for language-guided user localization, using area-level summaries and object-coverage reranking to resolve ambiguous urban descriptions.",
     imageUrl: "/miru26.png",
+    presentationId: "IS3-114",
   },
   {
     year: "2025",
@@ -46,6 +48,7 @@ export const publicationData: Publication[] = [
     tldr: "A multimodal retrieval method for everyday-object search that integrates multilingual scene text and visual cues using deep state space models.",
     paperUrl: "https://smilab.org/pdf/2025/2025-09-18T14:11:48+09:00_Hiroki_Nishimaki.pdf",
     imageUrl: "/rsj25.png",
+    presentationId: "IM3-04",
     slidesUrl: "https://speakerdeck.com/keio_smilab/rsj25-multilingual-scene-text-aware-multimodal-retrieval-for-everyday-objects-based-on-deep-state-space-models",
   },
 ];
