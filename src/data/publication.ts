@@ -37,6 +37,7 @@ export const publicationData: Publication[] = [
     title: "Street-View Image Retrieval for Natural Language-Guided User Localization in Urban Environments",
     authors: "Hiroki Nishimaki, Kei Katsumata, Jun Piao, Naoki Hosomi, Kentaro Yamada, and Komei Sugiura",
     tldr: "Street-view image retrieval for language-guided user localization, using area-level summaries and object-coverage reranking to resolve ambiguous urban descriptions.",
+    paperUrl: "https://smilab.org/pdf/2026/2026-08-27T11:33:00+09:00_Hiroki_Nishimaki.pdf",
     imageUrl: "/miru26.png",
     presentationId: "IS3-114",
   },

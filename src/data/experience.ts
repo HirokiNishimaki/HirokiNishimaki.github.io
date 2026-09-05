@@ -11,6 +11,26 @@ export interface Experience {
 
 export const experienceData: Experience[] = [
   {
+    date: "Sep 2026 - Present",
+    title: "Research Intern",
+    company: "CyberAgent",
+    // description:
+    //   "Developed novel algorithms for causal structure learning in reinforcement learning settings",
+    // advisor: "Peter Wang",
+    companyUrl: "https://www.cyberagent.co.jp/",
+    companyLogoUrl: "https://www.cyberagent.co.jp/special/rebranding/assets/img/img_logo_ca.png",
+  },
+  {
+    date: "Jun 2026 - Sep 2026",
+    title: "Research Intern",
+    company: "Honda R&D",
+    // description:
+    //   "Developed novel algorithms for causal structure learning in reinforcement learning settings",
+    // advisor: "Peter Wang",
+    companyUrl: "https://www.honda.co.jp/",
+    companyLogoUrl: "https://www.honda.co.jp/auto/common/images/common/ogp.png",
+  },
+  {
     date: "Oct 2025 - Present",
     title: "Machine Learning Engineering Intern",
     company: "CaseMatch",
