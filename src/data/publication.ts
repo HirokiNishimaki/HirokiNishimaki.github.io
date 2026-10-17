@@ -17,6 +17,21 @@ export interface Publication {
 export const publicationData: Publication[] = [
   // If you don't want to show publications, just make the array empty.
   {
+    year: "2027",
+    conference: "Under Review at ICASSP",
+    title: "DAHLIA: AN MLLM-BASED METRIC FOR FINE-GRAINED TEXT-AUDIO ALIGNMENT IN TEXT-TO-AUDIO GENERATION",
+    authors: "Shuitsu Koyama, Hiroki Nishimaki, Koki Seno, Yusuke Takagi, Hina Kogure, Yuiga Wada, and Shunya Nagashima",
+    // paperUrl: "https://arxiv.org/abs/2409.15476",
+    // codeUrl: "https://github.com/jsmith/scalable-causal-discovery",
+    //bibtex: "https://arxiv.org/abs/2409.15476.bib",
+    tldr: "A reference-free MLLM-based evaluation metric for text-to-audio generation that calibrates MLLM score distributions with embedding-based audio–caption alignment features to better match human judgments.",
+    imageUrl:"/icassp27.png",
+    // projectUrl: "https://3c52a6f9.urbanloc.pages.dev/",
+    // award: "🏆 Best Paper Award",
+    // if you have an image in public/images, you can use it like this:
+    // imageUrl: "/images/publication-image.jpg"
+  },
+  {
     year: "2026",
     conference: "Under Review at IEEE RA-L",
     title: "UrbanLoc: Language-Guided User Localization via Location-Aware Multimodal Retrieval",

@@ -2,6 +2,22 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { Publication } from "@/data/publication";
 
+const AUTHOR_ALIASES = ["Hiroki Nishimaki", "西牧宙輝"];
+
+function highlightSelf(authors: string) {
+  return authors
+    .split(new RegExp(`(${AUTHOR_ALIASES.join("|")})`, "g"))
+    .map((part, i) =>
+      AUTHOR_ALIASES.includes(part) ? (
+        <strong key={i} className="font-semibold text-zinc-900">
+          {part}
+        </strong>
+      ) : (
+        part
+      ),
+    );
+}
+
 export function PublicationEntry({
   publication,
 }: {
@@ -36,7 +52,9 @@ export function PublicationEntry({
           )}
         </div>
         <h3 className="font-serif text-md mb-3">{publication.title}</h3>
-        <p className="text-sm text-zinc-600 mb-4">{publication.authors}</p>
+        <p className="text-sm text-zinc-600 mb-4">
+          {highlightSelf(publication.authors)}
+        </p>
         <div className="flex flex-row flex-wrap gap-x-6 gap-y-2">
           {publication.paperUrl && (
             <a
