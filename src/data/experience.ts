@@ -11,6 +11,16 @@ export interface Experience {
 
 export const experienceData: Experience[] = [
   {
+    date: "Oct 2026 - Nov 2026",
+    title: "Machine Learning Engineering Intern",
+    company: "Recruit",
+    // description:
+    //   "Developed novel algorithms for causal structure learning in reinforcement learning settings",
+    // advisor: "Peter Wang",
+    companyUrl: "https://recruit-holdings.com/",
+    companyLogoUrl: "https://recruit-holdings.com/_astro/Logo-en.baVmB8rw.svg",
+  },
+  {
     date: "Sep 2026 - Present",
     title: "Research Intern",
     company: "CyberAgent",
