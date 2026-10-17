@@ -41,7 +41,7 @@ export const experienceData: Experience[] = [
     companyLogoUrl: "https://www.honda.co.jp/auto/common/images/common/ogp.png",
   },
   {
-    date: "Oct 2025 - Present",
+    date: "Oct 2025 - Sep 2026",
     title: "Machine Learning Engineering Intern",
     company: "CaseMatch",
     // description:
