@@ -29,7 +29,7 @@ export const experienceData: Experience[] = [
   },
   {
     date: "Sep 2026 - Present",
-    title: "Research Intern",
+    title: "Machine Learning Research Intern",
     company: "CyberAgent",
     // description:
     //   "Developed novel algorithms for causal structure learning in reinforcement learning settings",
@@ -39,7 +39,7 @@ export const experienceData: Experience[] = [
   },
   {
     date: "Jun 2026 - Sep 2026",
-    title: "Research Intern",
+    title: "Machine Learning Research Intern",
     company: "Honda R&D",
     // description:
     //   "Developed novel algorithms for causal structure learning in reinforcement learning settings",
