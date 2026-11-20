@@ -33,7 +33,7 @@ export const publicationData: Publication[] = [
   },
   {
     year: "2026",
-    conference: "Under Review at IEEE RA-L",
+    conference: "IEEE RA-L (to be presented at ICRA 2027)",
     title: "UrbanLoc: Language-Guided User Localization via Location-Aware Multimodal Retrieval",
     authors: "Hiroki Nishimaki, Kei Katsumata, Jun Piao, Naoki Hosomi, Kentaro Yamada, and Komei Sugiura",
     // paperUrl: "https://arxiv.org/abs/2409.15476",
