@@ -28,7 +28,7 @@ export const experienceData: Experience[] = [
     companyLogoUrl: "/recruit.svg",
   },
   {
-    date: "Sep 2026 - Present",
+    date: "Sep 2026 - Nov 2026",
     title: "Machine Learning Research Intern",
     company: "CyberAgent",
     // description:
